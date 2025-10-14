@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aulas API</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script defer type="module" src="./js/script.js"></script>
+</head>
+
+<body class="bg-gray-1000">
+    <section class="mx-auto max-w-7xl min-h-dvh p-4">
+
+        <!-- formulario -->
+        <form action="" name="enderecoForm" id="enderecoForm" method="get" class="p-8 space-y-6">
+            <h2 class="text-2xl font-bold text-amber-300 mb-4">Buscar endereço</h2>
+            
+            <!-- campos: nome, cep, etc  -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                
+                <div>
+                    <label for="" class="text-amber-300 mb-1 px-3 block">Cliente</label>
+                    <input type="text" name="nome" id="nome" placeholder="Digite o nome do cliente" class="w-full border border-amber-300 rounded px-3 py-2 placeholder:text-gray-600"/>
+                </div>
+                
+                <div>
+                    <label for="" class="text-amber-300 mb-1 px-3 block">CEP</label>
+                    <div class="flex gap-2">
+                        <input type="text" name="cep" id="cep" placeholder="Digite o CEP" class="w-full border border-amber-300 rounded px-3 py-2 placeholder:text-gray-600" />
+                        <button class="bg-amber-500 text-amber-300 font-semibold px-4 py-2 rounded hover:bg-amber-800 duration-500 cursor-pointer">Buscar</button>
+                    </div>
+                </div>
+                
+                <div>
+                    <label for="" class="text-amber-300 mb-1 px-3 block">Logradouro</label>
+                    <input type="text" name="lograoduro" id="logradouro" placeholder="Apartamento, Rua, Estrada, etc..." class="w-full border border-amber-300 rounded px-3 py-2 placeholder:text-gray-600"/>
+                </div>
+                
+                <div>
+                    <label for="" class="text-amber-300 mb-1 px-3 block">Número</label>
+                <input type="text" name="numero" id="numero" placeholder="Ex.. 999" class="w-full border border-amber-300 rounded px-3 py-2 placeholder:text-gray-600"/>
+            </div>
+            
+            <div>
+                <label for="" class="text-amber-300 mb-1 px-3 block">Complemento</label>
+                <input type="text" name="complemento" id="complemento" placeholder="Apto.. 999" class="w-full border border-amber-300 rounded px-3 py-2 placeholder:text-gray-600"/>
+            </div>
+            
+            <div>
+                <label for="" class="text-amber-300 mb-1 px-3 block">Bairro</label>
+                <input type="text" name="bairro" id="bairro" placeholder="Seu bairro" class="w-full border border-amber-300 rounded px-3 py-2 placeholder:text-gray-600"/>
+            </div>
+            
+            <div>
+                <label for="" class="text-amber-300 mb-1 px-3 block">Cidade</label>
+                <input type="text" name="cidade" id="cidade" placeholder="Sua cidade" class="w-full border border-amber-300 rounded px-3 py-2 placeholder:text-gray-600"/>
+            </div>
+            
+            <div>
+                <label for="" class="text-amber-300 mb-1 px-3 block">Estado</label>
+                <input type="text" name="estado" id="estado" placeholder="Ex... SP" class="w-full border border-amber-300 rounded px-3 py-2 placeholder:text-gray-600"/>
+            </div>
+            
+        </div>
+        
+        <div class="mt-4 flex justify-end gap-4">
+            <button type="button" id="mostrarDados" class="bg-amber-500 text-amber-300 font-semibold px-4 py-2 rounded hover:bg-amber-800 duration-500 cursor-pointer">Mostrar dados</button>
+            <button type="button" id="salvarDados" class="bg-amber-900 text-amber-300 font-semibold px-4 py-2 rounded hover:bg-amber-950 duration-500 cursor-pointer">Salvar dados</button>
+        </div>
+
+        </form>
+
+        <!-- cards para os cadastros realizados -->
+        
+        <div id="classContainer" class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+
+        <!-- modal para todas as mensagens -->
+
+        <div id="alterModal" class="hidden opacity-0 fixed inset-0 bg-gray-700 items-center justify-center transition-opacity duration-300">
+            <div class="text-center border-2 border-amber-300 p-4 rounded-lg">
+                <h3 class="text-3xl text-amber-300 font-semibold">Aviso</h3>
+                <p id="alertMessage" class="text-amber-300 mb-4 py-3 font-medium"></p>
+                <button id="fecharModal" class="bg-amber-500 hover:bg-amber-800 text-amber-300 px-4 py-2 rounded-lg font-semibold duration-500">Clique para voltar</button>
+            </div>
+        </div>
+
+    </section>
+</body>
+
+</html>
