@@ -1,4 +1,6 @@
-import { mostrarModal, maskCep } from "./util.js";
+import { mostrarModal, maskCep } from './util.js';
+import { buscarCep } from './buscarCep.js';
+
 
 const cepInput = document.querySelector('#cep')
 const buscarCepBtn = document.querySelector('#buscarCep')
@@ -7,3 +9,9 @@ const bMostrarDados = document.querySelector('#mostrarDados')
 
 //chamar a função de aplicar máscara
 maskCep(cepInput);
+
+//chamar a função do de buscar o cep
+buscarCepBtn.addEventListener('click', () => {
+    buscarCep()
+})
+

@@ -43,7 +43,7 @@ export function limparCampos() {
 // função a para mascara no CEP
 export function maskCep(cep) {
     cep.addEventListener('input', (evento ) => {
-        let value = evento.target.replace(/\D/g, '')
+        let value = evento.target.value.replace(/\D/g, '')
         if(value.length > 5) {
             value = value.slice(0, 5) + '-' + value.slice(5, 8)
         }
