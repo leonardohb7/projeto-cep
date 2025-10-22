@@ -1,5 +1,6 @@
-import { mostrarModal, maskCep } from './util.js';
 import { buscarCep } from './buscarCep.js';
+import { salvarDados } from './salvarDados.js';
+import { mostrarModal, maskCep } from './util.js';
 
 
 const cepInput = document.querySelector('#cep')
@@ -15,3 +16,6 @@ buscarCepBtn.addEventListener('click', () => {
     buscarCep()
 })
 
+enderecoForm.addEventListener('submit', (event) => {
+    salvarDados(event)
+})
