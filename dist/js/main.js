@@ -1,12 +1,12 @@
 import { buscarCep } from './buscarCep.js';
-import { salvarDados } from './salvarDados.js';
+import { salvarDados, mostrarDados } from './salvarDados.js';
 import { mostrarModal, maskCep } from './util.js';
 
 
 const cepInput = document.querySelector('#cep')
 const buscarCepBtn = document.querySelector('#buscarCep')
 const enderecoForm = document.querySelector('#enderecoForm')
-const bMostrarDados = document.querySelector('#mostrarDados')
+const mostrarDadosBtn = document.querySelector('#mostrarDados')
 
 //chamar a função de aplicar máscara
 maskCep(cepInput);
@@ -18,4 +18,8 @@ buscarCepBtn.addEventListener('click', () => {
 
 enderecoForm.addEventListener('submit', (event) => {
     salvarDados(event)
+})
+
+mostrarDadosBtn.addEventListener('click', (event) => {
+    mostrarDados(event)
 })

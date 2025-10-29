@@ -21,25 +21,25 @@
                 
                 <div>
                     <label for="" class="text-amber-300 mb-1 px-3 block">Cliente</label>
-                    <input type="text" name="nome" id="nome" placeholder="Digite o nome do cliente" class="w-full text-amber-300 border border-amber-300 rounded px-3 py-2 placeholder:text-gray-600"/>
+                    <input type="text" name="nome" id="nome" placeholder="Digite o nome do cliente" class="w-full text-amber-300 border border-amber-300 rounded px-3 py-2 placeholder:text-gray-600" required/>
                 </div>
                 
                 <div>
                     <label for="" class="text-amber-300 mb-1 px-3 block">CEP</label>
                     <div class="flex gap-2">
-                        <input type="text" name="cep" id="cep" placeholder="Digite o CEP" class="w-full text-amber-300 border border-amber-300 rounded px-3 py-2 placeholder:text-gray-600" />
+                        <input type="text" name="cep" id="cep" placeholder="Digite o CEP" class="w-full text-amber-300 border border-amber-300 rounded px-3 py-2 placeholder:text-gray-600" required />
                         <button id="buscarCep" type="button" class="bg-amber-500 text-amber-300 font-semibold px-4 py-2 rounded hover:bg-amber-800 duration-500 cursor-pointer">Buscar</button>
                     </div>
                 </div>
                 
                 <div>
                     <label for="" class="text-amber-300 mb-1 px-3 block">Logradouro</label>
-                    <input type="text" name="logradouro" id="logradouro" placeholder="Apartamento, Rua, Estrada, etc..." class="w-full border text-amber-300 border-amber-300 rounded px-3 py-2 placeholder:text-gray-600"/>
+                    <input type="text" name="logradouro" id="logradouro" placeholder="Apartamento, Rua, Estrada, etc..." class="w-full border text-amber-300 border-amber-300 rounded px-3 py-2 placeholder:text-gray-600" required/>
                 </div>
                 
                 <div>
                     <label for="" class="text-amber-300 mb-1 px-3 block">Número</label>
-                <input type="text" name="numero" id="numero" placeholder="Ex.. 999" class="w-full text-amber-300 border border-amber-300 rounded px-3 py-2 placeholder:text-gray-600"/>
+                <input type="text" name="numero" id="numero" placeholder="Ex.. 999" class="w-full text-amber-300 border border-amber-300 rounded px-3 py-2 placeholder:text-gray-600" required/>
             </div>
             
             <div>
@@ -49,17 +49,17 @@
             
             <div>
                 <label for="" class="text-amber-300 mb-1 px-3 block">Bairro</label>
-                <input type="text" name="bairro" id="bairro" placeholder="Seu bairro" class="w-full text-amber-300 border border-amber-300 rounded px-3 py-2 placeholder:text-gray-600"/>
+                <input type="text" name="bairro" id="bairro" placeholder="Seu bairro" class="w-full text-amber-300 border border-amber-300 rounded px-3 py-2 placeholder:text-gray-600" required/>
             </div>
             
             <div>
                 <label for="" class="text-amber-300 mb-1 px-3 block">Cidade</label>
-                <input type="text" name="cidade" id="cidade" placeholder="Sua cidade" class="w-full text-amber-300 border border-amber-300 rounded px-3 py-2 placeholder:text-gray-600"/>
+                <input type="text" name="cidade" id="cidade" placeholder="Sua cidade" class="w-full text-amber-300 border border-amber-300 rounded px-3 py-2 placeholder:text-gray-600" required/>
             </div>
             
             <div>
                 <label for="" class="text-amber-300 mb-1 px-3 block">Estado</label>
-                <input type="text" name="estado" id="estado" placeholder="Ex... SP" class="w-full text-amber-300 border border-amber-300 rounded px-3 py-2 placeholder:text-gray-600"/>
+                <input type="text" name="estado" id="estado" placeholder="Ex... SP" class="w-full text-amber-300 border border-amber-300 rounded px-3 py-2 placeholder:text-gray-600" required/>
             </div>
             
         </div>
@@ -73,7 +73,7 @@
 
         <!-- cards para os cadastros realizados -->
         
-        <div id="classContainer" class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+        <div id="cardsContainer" class="mt-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ml-8"></div>
 
         <!-- modal para todas as mensagens -->
 
@@ -89,3 +89,13 @@
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+

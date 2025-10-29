@@ -17,9 +17,10 @@ export function salvarDados(event){
     const estado = document.querySelector('#estado').value;
 
     // colocando os dados em um array
-    const usuario = [
+    const usuario = {
         nome, cep, logradouro, numero, complemento, bairro, cidade, estado
-    ]
+    }
+    
 
      // colocar as informações no localStorage
      // permite o armazenamento apenas de STRINGS
@@ -42,5 +43,42 @@ export function salvarDados(event){
     //  chamar a modal para dizer q os dados foram salvos - limparCampos
     mostrarModal('Dados salvos com sucesso!')
     limparCampos()
+
+    // chamar a função para mostrar os dados
+    mostrarDados();
+}
+
+// funcao para exibir os dados do Storage
+
+export function mostrarDados() {
+   const container = document.querySelector('#cardsContainer')
+
+   // limpar para nao repetir os cards
+   container.innerHTML='';
+
+   // buscar os dados armazenados, se existir
+   const usuarios = JSON.parse(localStorage.getItem('usuarios')) || [];
+
+   // verificando se retornou um array vazio
+   if (usuarios.lenght === 0) {
+        mostrarModal('Não existem dados gravados.')
+        return
+   }
+
+   // se o array tiver dados, iremos monstar, para cada objeto, um card
+   usuarios.forEach(usuario => {
+        container.innerHTML += `
+        <div class="rounded shadow-md p-6 border hover:shadow-lg transition-shadow duration-300 text-amber-300">
+            <h3 class="text=2xl font-semibold text-amber-700 mb-4 capitalize">${usuario.nome}</h3>
+            <p class="mb-1 font-medium">CEP: ${usuario.cep}</p>
+            <p class="mb-1 font-medium">Endereço: ${usuario.logradouro} - ${usuario.numero}</p>
+            <p class="mb-1 font-medium">Complemento: ${usuario.complemento}</p>
+            <p class="mb-1 font-medium">Bairro: ${usuario.bairro}</p>
+            <p class="mb-1 font-medium">Cidade: ${usuario.cidade}</p>
+            <p class="mb-1 font-medium">Estado: ${usuario.estado}</p>
+        </div>
+        `
+   });
+
 
 }
