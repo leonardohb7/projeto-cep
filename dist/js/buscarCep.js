@@ -19,7 +19,7 @@ export async function buscarCep() {
             // res.ok - retorna true *se* a requisicao deu certo
             // res.status - condição da resposta (404 - not found, 200 - ok, 500 - server error)
             // res.json() - metodo para converter a resposta em formato json
-            const res = await fetch(`http://viacep.com.br/ws/${cep}/json/`)
+            const res = await fetch(`https://viacep.com.br/ws/${cep}/json/`)
 
             // manipular o res.json
             // o metodo json le o corpo da resposta e atribui um objeto json a const data
